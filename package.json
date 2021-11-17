@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clog": "^0.1.6",
     "express": "^4.17.1",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "utils-and-helpers": "^2.1.0"
   }
 }
