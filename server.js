@@ -30,7 +30,7 @@ app.get('/notes', (req, res) =>
 
 // GET route for reading the db.json file 
 app.get('/api/notes', (req, res) =>
-  res.json('/db/db.json')
+  res.json(db)
 );
 // GET Route for index.html page
 app.get('*', (req, res) =>
