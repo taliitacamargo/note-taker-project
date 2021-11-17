@@ -4,8 +4,8 @@ const express = require('express');
 const path = require('path');
 // writefile method
 const fs = require('fs');
-const api = require('./routes/apiroutes');
-const htmlroutes = require ('./routes/htmlroutes');
+// const api = require('./routes/apiroutes');
+// const htmlroutes = require ('./routes/htmlroutes');
 const db = require('./db/db.json');
 
 // defining port variable
@@ -16,7 +16,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
+// app.use('/api', api);
 
 // determines where the supporting assets are going to be pulled from 
 app.use(express.static('public'));
@@ -37,17 +37,13 @@ app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-miniapp.post('/api/notes', (req, res) => {
-    const {jsonNotes} = req.body;
-    if (req.body) {
-       const newJsonNotes = {
-        notes,
-       };
-       db.push(newJsonNotes);
+app.post('/api/notes', (req, res) => {
+    note = req.body;
+       db.push(note);
        res.json(db);  
-    } else {
-        res.error('Error in adding new notes');
-    }
+    // } else {
+    //     res.error('Error in adding new notes');
+    // }
 });
 
 // listens to port
