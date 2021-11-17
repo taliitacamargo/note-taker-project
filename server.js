@@ -39,11 +39,16 @@ app.get('*', (req, res) =>
 
 app.post('/api/notes', (req, res) => {
     note = req.body;
-       db.push(note);
+       if (req.body) {
+        const newNote = {
+        note,
+        note_id: uuid(),
+        }; 
+        db.push(note);
        res.json(db);  
-    // } else {
-    //     res.error('Error in adding new notes');
-    // }
+    } else {
+        res.error('Error in adding new notes');
+    }
 });
 
 // listens to port
