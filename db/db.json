@@ -1,1 +1,47 @@
-[]
+[
+    {
+        "title": "Hi saved note",
+        "text": "this is a saved note",
+        "note_id": "a637"
+    },
+    {
+        "title": "this is another one",
+        "text": "hello you",
+        "note_id": "eec9"
+    },
+    {
+        "title": "Hola bud quote",
+        "text": "Bud: Ernesto, are you looking for salvation, redemption, and compassion?\nErnesto: My cousins? No, they're in the kitchen.",
+        "note_id": "119d"
+    },
+    {
+        "title": "asa",
+        "text": "sas",
+        "note_id": "6cf9"
+    },
+    {
+        "title": "Ernesto",
+        "text": "Bud: Look up in the sky.\n[Ernesto looks up in the sky and skywriting is seen, spelling out \"Bud Buckwald\"]\nBud: Aw, crap. I filled out the skywriting form wrong. It's supposed to say \"I quit.\"\nErnesto: Is that your social security number?\n[The skywriting then reveals the number \"549-24-1889\"]",
+        "note_id": "1229"
+    },
+    {
+        "title": "adsa",
+        "text": "xcz",
+        "note_id": "661d"
+    },
+    {
+        "title": "asdasd",
+        "text": "sdas",
+        "note_id": "8311"
+    },
+    {
+        "title": "asda",
+        "text": "asdasasd",
+        "note_id": "b338"
+    },
+    {
+        "title": "asdas",
+        "text": "adasdasd",
+        "note_id": "e7c7"
+    }
+]
