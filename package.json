@@ -12,6 +12,7 @@
     "clog": "^0.1.6",
     "express": "^4.17.1",
     "inquirer": "^8.2.0",
-    "utils-and-helpers": "^2.1.0"
+    "utils-and-helpers": "^2.1.0",
+    "uuid": "^8.3.2"
   }
 }

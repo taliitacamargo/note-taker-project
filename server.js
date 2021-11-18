@@ -7,6 +7,9 @@ const fs = require('fs');
 // const api = require('./routes/apiroutes');
 // const htmlroutes = require ('./routes/htmlroutes');
 const db = require('./db/db.json');
+const { readAndAppend } = require('./helpers/fsUtils');
+const uuid = require('./helpers/uuid');
+
 
 // defining port variable
 const PORT = process.env.port || 3001;
@@ -38,18 +41,27 @@ app.get('*', (req, res) =>
 );
 
 app.post('/api/notes', (req, res) => {
-    note = req.body;
+  const {title,text} = req.body
+     note = req.body;
        if (req.body) {
         const newNote = {
-        note,
+          title,
+          text,
         note_id: uuid(),
         }; 
         db.push(note);
+      readAndAppend(newNote, './db/db.json')
        res.json(db);  
     } else {
         res.error('Error in adding new notes');
     }
 });
+
+app.get('/api/notes/:id', (req, res) =>
+res.json(db[req.params.id]));
+
+
+
 
 // listens to port
 app.listen(PORT, () =>
