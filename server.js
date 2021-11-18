@@ -35,9 +35,10 @@ app.get('/notes', (req, res) =>
 app.get('/api/notes', (req, res) => {
 console.log('GET /api/notes triggered.... notes is ')
 console.log(notes)
-  res.json(notes)
-}
-);
+// readFromFile('./db/db.json')
+// .then((notes) = res.json(JSON.parse(notes)));
+});
+
 // GET Route for index.html page
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
